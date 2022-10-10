@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="img/KK2.png" type="image/x-icon">
     <title>KiaKia</title>
        <link rel="stylesheet" href="styles/kiakia-desktop.css">
+       <link rel="stylesheet" href="styles/kiakia-mobile.css">
        <link rel="stylesheet" href="http://www.w3.org/2000/svg">
        <!--fonts-->
        <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +29,14 @@
           <img src="images/KIAKIA 2 2.png">
         </a>
       </div>
+      <div class="menu-icon">
+        <img src="images/menu 1.png" class="menu">
+      </div>
       <div class="preview-links">
-        <a href="#">Why Kiakia?</a>
-        <a href="#">About Us</a>
-        <a href="#">Connect with us</a>
+        <img src="images/x 1.png" class="cancel">
+        <a href="#why">Why Kiakia?</a>
+        <a href="#about">About Us</a>
+        <a href="#connect">Connect with us</a>
       </div>
       <div class="waitlist-frame">
        <a href="#"> <button type="submit">Join Waitlist</button> </a>
@@ -39,7 +44,7 @@
   </header>
   <!-- Navbar End -->
   <!--Homepage start-->
-  <section class="container-1">
+   <section class="container-1">
     <div class="container-1-text">
       <h2> Trade your <span>crypto</span></h2>
       <p>
@@ -53,11 +58,11 @@
         Join our waitlist and be the first to know when we release.
       </h5>
       <h6>
-        <img src="images/vector1.png"> 
-        First 2,000 users receive  <span>free</span> transactions for a year.
+        <b class="first"> <img src="images/vector1.png"> 
+        First 2,000 users receive    <span>free</span> </b> <b class="b2">transactions for a year</b>.
       </h6>
     </div>
-    <div class="container-1-img">
+     <div class="container-1-img">
       <img src="images/iphone.png">
     </div>
     <div class="container-1-number">
@@ -70,14 +75,14 @@
       <span>
         ......want to know why
       </span>
-    </div> 
+    </div>  
   </section> 
   <section class="curly-arrow">
     <img src="images/curly-arrow.png">
   </section>
   <!--Homepage end-->
   <!--About us start-->
-  <section class="why-kiakia">
+  <section class="why-kiakia" id="why">
     <div class="why-kiakia-1">
       <p>WHY KIAKIA</p>
       <h2>
@@ -126,7 +131,7 @@
         Our easy to use interface makes KiaKia one of the fastest growing NFT marketplaces, where artists, fans and everyone in between can browse, create, buy, sell, and auction NFTs.      </p>
     </div>
   </section>
-  <section class="gift-card-container">
+   <section class="gift-card-container">
     <div class="gift-card-container-text">
       <h2>
         Exchange and trade gift cards using our app
@@ -137,9 +142,9 @@
     <div class="gift-card-container-image">
       <img src="images/amazon.png">
     </div>
-  </section>
+  </section> 
  <!-- about-kia-kia -->
-  <section class="about-kiakia">
+  <section class="about-kiakia" id="about">
     <div class="about">
       <p>
         ABOUT KIAKIA
@@ -167,7 +172,7 @@
     </div>
   </section>
 
-  <section class="connect-section">
+  <section class="connect-section" id="connect">
     <div class="chat-icon">
       <img src="images/6.png">
       <img src="images/KIAKIA pattern 2.png" class="pattern">
@@ -194,7 +199,7 @@
     </div>
   </section>
 
-  <section class="newsletter-section">
+   <section class="newsletter-section">
     <p>
       LEARN MORE
     </p>
@@ -208,7 +213,7 @@
       <input type="email" placeholder="Email Address">
       <button type="submit">subscribe</button>
     </form>
-  </section>
+  </section> 
   <footer>
     <div class="footer-1">
       <div class="footer-1-logo">
@@ -252,7 +257,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> 
   <section class="copyright">
     <div class="copyright-text">
     <span>
@@ -260,5 +265,6 @@
     </span>
   </div>
   </section>
+  <script src="scripts/kiakia.js"></script>
 </body>
 </html>

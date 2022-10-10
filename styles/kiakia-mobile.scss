@@ -1,176 +1,184 @@
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 950px) {
     body {
-       background-color: white;
-       padding: 0;
-       margin: 0;
-       .header-section {
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 2vw;
-        padding-top: 2.5vw;
-        padding-left: 6vw;
-        margin-bottom: 3.5vw;
-       } 
-       .kiakia-logo {
-        width: 12vw;
-        img {
-            width: 15vw;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        .header-section {
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 4vw;
         }
-       }
-       .preview-links {
-        display: flex;
-        flex-direction: row;
-        gap: 3vw;
-        img {
+        .kiakia-logo {
+            width: 12vw;
+            img {
+                width: 25vw;
+            }
+        }
+        .preview-links {
             display: none;
-        }
-         a {
-            color: #616161;
-            font-size: 16px;
-            font-weight: 600;
-            font-family: 'Mulish', sans-serif;
-            text-decoration: none;
-            align-self: center;
+            grid-template-columns: auto;
+            width: 100%;
+            z-index: 1;
+            background-color: white;
+            height: 45vw;
+            padding-top: 3vw;
+            margin-top: -7vw;
+            img {
+                width: 3vw;
+                height: 3vw;
+                justify-self: right;
+            }
+             a {
+                color: #616161;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: 'Mulish', sans-serif;
+                text-decoration: none;
+                justify-self: center;
+             }
          }
-       }
-       .waitlist-frame {
-        button {
-            width: 10vw;
-            padding: .5vw;
-            border-radius: 8px;
-            font-size: 20px;
-            font-weight: 700;
-            font-family: 'Mulish', sans-serif;
-            border: none;
-            color: white;
-            background-image: linear-gradient(#04F2F2, #00BAFF);
+         .waitlist-frame {
+           display: none;
         }
-       }
-       .menu-icon {
-        display: none;
-       }
-    
-    .container-1 {
-        display: grid;
-        grid-template-columns: auto auto;
-        max-width: 100%;
-        justify-content: center;
-        gap: 4vw;
-        .container-1-text {
+        .menu-icon {
+            display: flex;
+            img {
+                width: 4vw;
+                height: 3.5vw;
+            }
+        }
+        .container-1 {
             display: flex;
             flex-direction: column;
-            h2 {
-                font-size: 64px;
-                font-weight: 700;
-                font-family: 'Mulish', sans-serif;
-                width: 25vw;
-                color: black;
-                margin-bottom: 1vw;
-                span {
-                    font-size: 64px;
+            max-width: 100%;
+            align-items: center;
+            gap: 4vw;
+            .container-1-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    font-size: 48px;
                     font-weight: 700;
                     font-family: 'Mulish', sans-serif;
-                    color: #04F2F2;
-                } 
-            }
-            p {
-                font-size: 18px;
-                font-weight: 400;
-                font-family: 'Mulish', sans-serif;
-                width: 30vw;
-                color: black;
-            }
-            form {
-                display: flex;
-                flex-direction: row;
-                gap: 10px;
-                margin-top: 1vw;
-                input {
-                    width: 22vw;
-                    border: 2px solid grey;
-                    border-radius: 8px;
-                    padding: 1vw;
+                    width: 80vw;
+                    text-align: center;
+                    color: black;
+                    margin-bottom: 1vw;
+                    span {
+                        font-size: 48px;
+                        font-weight: 700;
+                        font-family: 'Mulish', sans-serif;
+                        color: #04F2F2;
+                    } 
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: 'Mulish', sans-serif;
+                    width: 85vw;
+                    color: black;
+                    text-align: center;
+                }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 1vw;
+                    input {
+                        width: 80vw;
+                        border: 2px solid grey;
+                        border-radius: 8px;
+                        padding: 2vw;
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-family: 'Mulish', sans-serif;
+                        color: black;
+                    }
+                    input:focus {
+                        outline: 1px solid grey;
+                    }
+                    button {
+                        background-image: linear-gradient(#04F2F2, #00BAFF);
+                        width: 85vw;
+                        padding: 2.5vw;
+                        border-radius: 8px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        font-family: 'Mulish', sans-serif;
+                        border: none;
+                        color: white;
+                    }
+                    button:focus {
+                        outline: none;
+                    }
+                }
+                h5 {
+                    font-size: 17px;
+                    font-weight: 400;
+                    font-family: 'Mulish', sans-serif;
+                    width: 85vw;
+                    color: black;  
+                    margin-bottom: 1vw;
+                }
+                h6 {
+                    display: grid;
+                    grid-template-columns: auto;
+                    gap: 5px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: 'Mulish', sans-serif;
+                    width: 85vw;
+                    color: black;
+                    img {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                    }
+                    span {
                     font-size: 18px;
                     font-weight: 400;
                     font-family: 'Mulish', sans-serif;
-                    color: black;
-                }
-                input:focus {
-                    outline: 1px solid grey;
-                }
-                button {
-                    background-image: linear-gradient(#04F2F2, #00BAFF);
-                    width: 10vw;
-                    padding: .5vw;
-                    border-radius: 8px;
-                    font-size: 20px;
-                    font-weight: 700;
-                    font-family: 'Mulish', sans-serif;
-                    border: none;
-                    color: white;
-                }
-                button:focus {
-                    outline: none;
-                }
-            }
-            h5 {
-                font-size: 17px;
-                font-weight: 400;
-                font-family: 'Mulish', sans-serif;
-                width: 35vw;
-                color: black;  
-                margin-bottom: 1vw;
-            }
-            h6 {
-                display: flex;
-                flex-direction: row;
-                gap: 5px;
-                font-size: 17px;
-                font-weight: 400;
-                font-family: 'Mulish', sans-serif;
-                width: 35vw;
-                color: black; 
-                img {
-                    width: 1.5vw;
-                }
-                span {
-                font-size: 17px;
-                font-weight: 400;
-                font-family: 'Mulish', sans-serif;
-                color: #00BAFF;
+                    color: #00BAFF;
+                    }
+                    .b2 {
+                        justify-self: right;
+                    }
                 }
             }
         }
         .container-1-img {
-            padding-top: 3vw;
+            display: flex;
+            align-items: center;
+            margin-bottom: -5vw;
            img {
-            width: 45vw;
+            width: 75vw;
            }
         }
         .container-1-number {
-            display: grid;
-            grid-template-columns: auto;
-            margin-top: -17vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             h1 {
-            font-size: 96px;
+            font-size: 64px;
             font-weight: 600;
             font-family: 'Mulish', sans-serif;
             color: black; 
-            margin-bottom: -1vw;
             }
             p {
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 600;
                 font-family: 'Mulish', sans-serif;
                 color: black; 
+                margin-top: -7vw;
             }
             span {
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 600;
                 font-family: 'Mulish', sans-serif;
                 color: black;
-                justify-self: right; 
             }
         }
     }
@@ -178,6 +186,7 @@
         display: grid;
         justify-content: center;
         max-width: 100%;
+        margin-top: 3vw;
         img {
             width: 5vw;
         }
@@ -187,20 +196,21 @@
         grid-template-columns: auto;
         max-width: 100%;
         justify-content: center;
-        margin-top: 2vw;
+        margin-top: 13vw;
         .why-kiakia-1 {
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 100%;
             p {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 600;
                 font-family: 'Mulish', sans-serif;
                 color: #616161;  
+                margin-bottom: -5vw;
             }
             h2 {
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: 700;
                 font-family: 'Mulish', sans-serif;
                 color: black;  
@@ -208,7 +218,7 @@
         }
         .why-kiakia-2 {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
         .why-kiakia-3 {
             display: grid;
@@ -216,8 +226,8 @@
             max-width: 100%;
             margin-top: 2vw;
             button {
-                width: 25vw;
-                padding: 1vw;
+                width: 85vw;
+                padding: 2vw;
                 border-radius: 8px;
                 font-size: 20px;
                 font-weight: 700;
@@ -230,91 +240,96 @@
     }
     .trade-container {
         display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        gap: 10vw;
+        grid-template-columns: auto;
         margin-top: 7vw;
         .trade-container-text {
             display: flex;
-            flex-direction: column;
-            padding-top: 7vw;
+            flex-direction: column;    
+            padding-left: 7vw; 
+            margin-bottom: 2.5vw;      
             h2 {
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: 700;
                 font-family: 'Mulish', sans-serif;
-                width: 25vw;
+                width: 80vw;
+                margin-bottom: 1.5vw;
             }
             p {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 400;
                 font-family: 'Mulish', sans-serif;
-                width: 30vw;  
+                width: 80vw;  
             }
         }
         .trade-container-image {
+            justify-self: center;
             img {
-                width: 45vw;
-                height: 40vw;
+                width: 75vw;
+                height: 70vw;
             }
         }
     }
     .nft-container {
         display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        gap: 10vw;
+        grid-template-columns: auto;
         margin-top: 7vw;
         .nft-container-text {
             display: flex;
-            flex-direction: column;
-            padding-top: 7vw;
+            flex-direction: column;    
+            padding-left: 7vw;      
+            order: 1;
+            margin-bottom: 2.5vw; 
             h2 {
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: 700;
                 font-family: 'Mulish', sans-serif;
-                width: 25vw;
+                width: 80vw;
+                margin-bottom: 1.5vw;
             }
             p {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 400;
                 font-family: 'Mulish', sans-serif;
-                width: 30vw;  
+                width: 80vw;  
             }
         }
         .nft-container-image {
+            justify-self: center;
+            order: 2;
             img {
-                width: 45vw;
-                height: 40vw;
+                width: 75vw;
+                height: 70vw;
             }
         }
     }
     .gift-card-container {
         display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        gap: 10vw;
+        grid-template-columns: auto;
         margin-top: 7vw;
         .gift-card-container-text {
             display: flex;
-            flex-direction: column;
-            padding-top: 7vw;
+            flex-direction: column;    
+            padding-left: 7vw; 
+            margin-bottom: 2.5vw;    
             h2 {
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: 700;
                 font-family: 'Mulish', sans-serif;
-                width: 25vw;
+                width: 80vw;
+                margin-bottom: 1.5vw;
             }
             p {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 400;
                 font-family: 'Mulish', sans-serif;
-                width: 30vw;  
+                width: 80vw;  
             }
         }
         .gift-card-container-image {
+            justify-self: center;
             img {
-                width: 45vw;
-                height: 40vw;
+                width: 75vw;
+                height: 70vw;
             }
         }
     }
@@ -330,48 +345,48 @@
             justify-content: center;
             max-width: 100%;
             p {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 600;
                 font-family: 'Mulish', sans-serif; 
                 color: #616161;
                 justify-self: center;
             }
             h3 {
-                font-size: 40px;
+                font-size: 32px;
                 font-weight: 700;
                 font-family: 'Mulish', sans-serif; 
                 color: black;
+                text-align: center;
+                width: 80vw;
+                margin-top: 12vw;
             }
         }
     }
     .about-content {
         display: grid;
-        grid-template-columns: 40vw 20vw;
+        grid-template-columns: auto;
         max-width: 100%;
-        justify-content: center;
+        justify-content: left;
         .about-content-logo {
-            img {
-                width: 25vw;
-                height: 30vw;
-            }
+          display: none;
         }
         .about-content-text {
             display: flex;
             flex-direction: column;
-            padding-top: 3vw;
+            padding-left: 5vw;
             h4 {
-                font-size: 24px;
+                font-size: 16px;
                 font-weight: 700;
                 font-family: 'Mulish', sans-serif; 
                 color: black;
                 margin-bottom: -1vw;
             }
             p {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 400;
                 font-family: 'Mulish', sans-serif; 
                 color: black;  
-                width: 26vw;
+                width: 90vw;
             }
         }
     }
@@ -383,7 +398,7 @@
             display: grid;
             grid-template-columns: auto;
             .pattern {
-                width: 35vw;
+                width: 85vw;
             }
             .connect-form {
                 background-color: white;
@@ -391,23 +406,23 @@
                 grid-template-columns: auto;
                 justify-content: left;
                 padding-left: 3vw;
-                width: 25vw;
-                height: 40vw;
+                width: 80vw;
+                height: 120vw;
                 grid-row: 3 / 2;
                 z-index: 1;
-                margin-bottom: -45vw;
-                margin-top: 1.5vw;
-                margin-left: 3vw;
+                margin-bottom: -125vw;
+                margin-top: 25vw;
+                margin-left: 8vw;
                 border-radius: 15px;
                 h3 {
                 font-size: 24px;
                 font-weight: 400;
                 font-family: 'Mulish', sans-serif; 
                 color: black;
-                margin-bottom: -6vw;
+                margin-bottom: -3vw;
                 }
                 .hear-you {
-                    margin-bottom: -10vw;
+                    margin-bottom: 2vw;
                 }
                 p {
                 font-size: 16px;
@@ -416,10 +431,10 @@
                 color: black;
                 }
                 input {
-                    width: 18vw;
+                    width: 65vw;
                     border: 3px solid #2F2E41;
                     border-radius: 8px;
-                    padding: 1vw;
+                    padding: 2vw;
                     font-size: 16px;
                     font-weight: 400;
                     font-family: 'Mulish', sans-serif; 
@@ -429,11 +444,11 @@
                     outline: none;
                 }
                 textarea {
-                    width: 20vw;
+                    width: 68vw;
                     border: 3px solid #2F2E41;
                     border-radius: 8px;
                     padding-left: 0.2vw;
-                    height: 8vw;
+                    height: 30vw;
                     font-size: 16px;
                     font-weight: 400;
                     font-family: 'Mulish', sans-serif; 
@@ -445,56 +460,59 @@
                 }
                 button {
                     background-color: #2F2E41;
-                    width: 21vw;
+                    width: 70vw;
                     text-align: center;
                     font-size: 16px;
                     font-weight: 400;
                     font-family: 'Mulish', sans-serif; 
                     color: white;
                     border: none;
-                    padding: 1vw;
+                    padding: 2vw;
                     border-radius: 8px;
                 }
             }
         }
     }
-
     .newsletter-section {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-image: linear-gradient(#04F2F2, #00BAFF);
         max-width: 100%;
-        height: 30vw;
+        height: 100vw;
         padding-top: 4vw;
+        margin-top: 40vw;
         p {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 600;
             font-family: 'Mulish', sans-serif; 
             color: #2F2E41;
+            margin-bottom: -2vw;
         }
         h2 {
-            font-size: 40px;
+            font-size: 32px;
             font-weight: 700;
             font-family: 'Mulish', sans-serif; 
             color: black;
+            text-align: center;
+            margin-bottom: -4vw;
         }
         h6 {
             font-size: 14px;
             font-weight: 600;
             font-family: 'Mulish', sans-serif; 
             color: black;
-            width: 40vw;
+            width: 80vw;
             text-align: center;
         }
         form {
             display: flex;
-            flex-direction: row;
-            gap: 1vw;
+            flex-direction: column;
+            gap: 2vw;
             input {
                 background-color: white;
-                border: 2px solid #2F2E41;
-                width: 25vw;
+                border: 2px solid #C1C1C1;
+                width: 65vw;
                 padding: 15px;
                 border-radius: 8px;
             }
@@ -506,7 +524,8 @@
                 font-family: 'Mulish', sans-serif; 
                 color: white;
                 text-align: center;
-                width: 10vw;
+                width: 74vw;
+                padding: 3.5vw;
                 border-radius: 8px;
             }
             input:focus {
@@ -519,7 +538,7 @@
     }
     footer {
         display: grid;
-        grid-template-columns: 45vw auto;
+        grid-template-columns: auto;
         max-width: 100%;
         justify-content: left;
         padding-left: 7vw;
@@ -531,14 +550,14 @@
                 display: flex;
                 flex-direction: column;
                 img {
-                    width: 15vw;
+                    width: 35vw;
                 }
                 p {
                 font-size: 16px;
                 font-weight: 400;
                 font-family: 'Mulish', sans-serif;
                 color: black;
-                width: 30vw;
+                width: 90vw;
                 }
             }
             .footer-1-contact {
@@ -547,11 +566,11 @@
                 .phone {
                     display: flex;
                     flex-direction: row;
-                    gap: 1vw;
+                    gap: 2vw;
                     img {
-                        width: 1vw;
-                        height: 2vw;
-                       align-self: center;
+                        width: 4vw;
+                        height: 4vw;
+                        align-self: center;
                     }
                     p {
                     font-size: 18px;
@@ -606,14 +625,14 @@
         display: grid;
         justify-content: center;
         max-width: 100%;
-        margin-top: 3vw;
+        margin-top: 10vw;
         .copyright-text {
-            width: 80vw;
+            width: 90vw;
             border-top: 2px solid #00bbff85;
             display: grid;
             flex-direction: row;
             justify-content: center;
-            padding-top: 2vw;
+            padding-top: 4vw;
             span {
                 font-size: 14px;
                 font-weight: 400;
@@ -621,7 +640,5 @@
                 color: black;
             }
         }
-    }
-       
     }
 }
