@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="img/KK2.png" type="image/x-icon">
+    <title>KiaKia</title>
+    <link rel="stylesheet" href="{% static 'styles/kiakia-desktop.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/kiakia-mobile.css' %}">
+    <link rel="stylesheet" href="http://www.w3.org/2000/svg">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <header class="header-section">
+        <div class="kiakia-logo">
+            <a href="index.html">
+                <img src="{% static 'images/KIAKIA 2 2.png' %}">
+            </a>
+        </div>
+        <div class="menu-icon">
+            <img src="{% static 'images/menu 1.png' %}" class="menu">
+        </div>
+        <div class="preview-links">
+            <img src="{% static 'images/x 1.png' %}" class="cancel">
+            <a href="#why">Why Kiakia?</a>
+            <a href="#about">About Us</a>
+            <a href="#connect">Connect with us</a>
+        </div>
+        <div class="waitlist-frame">
+            <a href="#"> <button type="submit">Join Waitlist</button> </a>
+        </div>
+    </header>
+    <!-- Navbar End -->
+    <!--Homepage start-->
+    <section class="container-1">
+            <style>
+                .error {
+                    color: red;
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: bolder;
+                    font-family: "Mulish", sans-serif;
+                }
+            
+                .success {
+                    color: rgb(6, 190, 6);
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: bolder;
+                    font-family: "Mulish", sans-serif;
+                }
+            </style>
+        <div class="container-1-text">
+            <h2> Trade your <span>crypto</span></h2>
+            <p>
+                It's safer and easier than ever to begin your crypto journey with Kiakia exchange.
+            </p>
+            <form method="POST">
+            {% csrf_token %}
+                <input type="email" name="email" id="email" placeholder="Input your email" required>
+                <button name="waitlist-btn" type="submit">Join Waitlist</button>
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                <h4 class={{message.tags}}>{{message}}</h4>
+                {% endfor %}
+            {% endif %}
+            <h5>
+                Join our waitlist and be the first to know when we launch.
+            </h5>
+            <h6>
+                <b class="first"> <img src="{% static 'images/vector1.png' %}">
+                    First 2,000 users receive <span>free</span> </b> <b class="b2">transactions for a year</b>.
+            </h6>
+        </div>
+        <div class="container-1-img">
+            <img src="{% static 'images/iphone.png' %}">
+        </div>
+        <div class="container-1-number">
+            <h1>
+                5,167
+            </h1>
+            <p>
+                people are currently waiting
+            </p>
+            <span>
+                ......want to know why
+            </span>
+        </div>
+    </section>
+    <section class="curly-arrow">
+        <img src="{% static 'images/curly-arrow.png' %}">
+    </section>
+    <!--Homepage end-->
+    <!--About us start-->
+    <section class="why-kiakia" id="why">
+        <div class="why-kiakia-1">
+            <p>WHY KIAKIA</p>
+            <h2>
+                Made for Newbies
+            </h2>
+        </div>
+        <div class="why-kiakia-2">
+            <div class="onboarding">
+                <img src="{% static 'images/Frame 50.png' %}">
+            </div>
+            <div class="security">
+                <img src="{% static 'images/Frame 51.png' %}">
+            </div>
+            <div class="onboarding">
+                <img src="{% static 'images/Frame 52.png' %}">
+            </div>
+        </div>
+        <div class="why-kiakia-3">
+            <button type="submit">Join waitlist</button>
+        </div>
+    </section>
+    <!--About us start-->
+    <!--Trade start-->
+    <section class="trade-container">
+        <div class="trade-container-text">
+            <h2>
+                Trade your favorite crypto and make profits
+            </h2>
+            <p>
+                KIAKIA EXCHANGE's mission is to build a cryptocurrency exchange where all blockchain traders can become
+                part of a community that rewards them for being part of it. </p>
+        </div>
+        <div class="trade-container-image">
+            <img src="{% static 'images/bitcoin.png' %}">
+        </div>
+    </section>
+    <!--Trade start-->
+    <section class="nft-container">
+        <div class="nft-container-image">
+            <img src="{% static 'images/nft-card.png' %}">
+        </div>
+        <div class="nft-container-text">
+            <h2>
+                Discover, create and Trade NFT's
+            </h2>
+            <p>
+                Our easy to use interface makes KiaKia one of the fastest growing NFT marketplaces, where artists, fans
+                and everyone in between can browse, create, buy, sell, and auction NFTs. </p>
+        </div>
+    </section>
+    <section class="gift-card-container">
+        <div class="gift-card-container-text">
+            <h2>
+                Exchange and trade gift cards using our app
+            </h2>
+            <p>
+                Cashing out your giftcards is completely straightforward and secure, with our short turnaround and high
+                pay rates. Our goal at KiaKia is to make selling gift cards as easy and rewarding as possible for our
+                clients.
+        </div>
+        <div class="gift-card-container-image">
+            <img src="{% static 'images/amazon.png' %}">
+        </div>
+    </section>
+    <!-- about-kia-kia -->
+    <section class="about-kiakia" id="about">
+        <div class="about">
+            <p>
+                ABOUT KIAKIA
+            </p>
+            <h3>
+                The blockchain platform made just for you..
+            </h3>
+        </div>
+    </section>
+    <!-- about-kia-kia-content -->
+    <section class="about-content">
+        <div class="about-content-logo">
+            <img src="{% static 'images/KIAKIA 3 1.png' %}">
+        </div>
+        <div class="about-content-text">
+            <h4>
+                Kiakia is ..
+            </h4>
+            <p>
+                a cryptocurrency, giftcard, and NFTs marketplace where you can earn rewards, bonuses, and utilities on
+                all your trades.
+            </p>
+            <p>
+                KIAKIA is designed to help web3 beginners get their feet wet in the space by learning about blockchain
+                and cryptocurrencies.
+            </p>
+        </div>
+    </section>
+
+    <section class="connect-section" id="connect">
+        <div class="chat-icon">
+            <img src="{% static 'images/6.png' %}">
+            <img src="{% static 'images/KIAKIA pattern 2.png' %}" class="pattern">
+            <div class="connect-form">
+                <h3>
+                    Connect with us
+                </h3>
+                <p class="hear-you">
+                    We would love to hear from you
+                </p>
+                <a href="mailto:info@kiakiaexchange.com">
+                    Send a mail to us.
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <p>
+            LEARN MORE
+        </p>
+        <h2>
+            Subscribe to Our Newsletter
+        </h2>
+        <h6>
+            Don't worry we'll only send really neat stuff like offers, guides, tips and tricks you'll need on your
+            crypto journey.
+        </h6>
+        <form>
+            <input type="email" placeholder="Email Address">
+            <button type="submit">subscribe</button>
+        </form>
+
+    </section>
+    <footer>
+        <div class="footer-1">
+            <div class="footer-1-logo">
+                <img src="{% static 'images/KIAKIA 2 2.png' %}">
+                <p>
+                    Kiakia exchange is a blockchain centered company aimed at enabling new adopters to earn money by
+                    trading in the crypto space.
+                </p>
+            </div>
+            <div class="footer-1-contact">
+                <div class="phone">
+                    <img src="{% static 'images/Vector.png' %}">
+                    <p>+ 1 661 8744 867</p>
+                </div>
+                <div class="phone">
+                    <img src="{% static 'images/mail 2.png' %}">
+                    <p>info@kiakiaexchange.com</p>
+                </div>
+                <div class="phone">
+                    <img src="{% static 'images/map-pin 1.png' %}">
+                    <p>Lagos, Nigeria</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <div class="footer-2-1">
+                <h4>Quick Links</h4>
+                <div class="links">
+                    <a href="#">Why Kiakia</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Connect with us</a>
+                </div>
+            </div>
+            <div class="footer-2-social">
+                <h4>
+                    Our socials
+                </h4>
+                <div class="socials">
+                    <a href="#"> <img src="{% static 'images/instagram 1.png' %}"></a>
+                    <a href="#"> <img src="{% static 'images/twitter 2.png' %}"></a>
+                    <a href="#"> <img src="{% static 'images/iconoir_discord.png' %}"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="copyright">
+        <div class="copyright-text">
+            <span>
+                Copyright © Kiakia Exchange. All rights reserved. 2022.
+            </span>
+        </div>
+    </section>
+    <script src="{% static 'scripts/kiakia.js' %}"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div>
+        <h1>To join the waitlist, submit your mail below.</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="email" name="email" id="email" placeholder="Input your email">
+            <input type="email" name="email2" id="email2" placeholder="Confirm your email">
+            <input type="submit" value="Submit">
+        </form>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+    </div>
+</body>
+</html> -->
