@@ -1,0 +1,11 @@
+The views.py file carries the main components of the whole backend as it acepts the mails, send confirmation message and display messages of success and errors.
+The models.py file stores the models and the components, in this ase which is the email and the date it was created.
+The admin.py registers the models into the admin( which is the storage of the information. )
+The settings.py is really the heart of this whole process, because it specifies where all urls, templates can be found, specifies the databases which dbsqlite3, the middlewares, registers the apps, etc. And also, in this case, it stores the the sender-mail, sender-mail password, email host and the necessary components for sending mails in django.
+The urls.py specifies the urls of the pages, in this case since its a landing page, it would only have the home url.
+The apps.py specifies the apps in the project.
+
+And all other .py or all other files play their vital part in making the sure the code works flawlessly.
+
+
+Now, HTML in django has new functionalities which help to grab values in the views.py files in python. For example: {% if messages == true %} HTML code {% endif %}. And also, for loops and all python statements would work just fine. In this case, since I'm grabbing the specified the messages in django, i would just render the specified message in the template.
