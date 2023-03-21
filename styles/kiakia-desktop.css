@@ -1,4 +1,4 @@
-@media screen and (max-width: 950px) {
+@media screen and (min-width: 1000px) {
   body {
     background-color: white;
     padding: 0;
@@ -6,32 +6,26 @@
   }
   body .header-section {
     max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 4vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2vw;
+    padding-top: 2.5vw;
+    padding-left: 6vw;
+    margin-bottom: 3.5vw;
   }
   body .kiakia-logo {
     width: 12vw;
   }
   body .kiakia-logo img {
-    width: 25vw;
+    width: 15vw;
   }
   body .preview-links {
-    display: none;
-    grid-template-columns: auto;
-    width: 100%;
-    z-index: 1;
-    background-color: white;
-    height: 45vw;
-    padding-top: 3vw;
-    margin-top: -7vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
   }
   body .preview-links img {
-    width: 3vw;
-    height: 3vw;
-    justify-self: right;
+    display: none;
   }
   body .preview-links a {
     color: #616161;
@@ -39,64 +33,98 @@
     font-weight: 600;
     font-family: "Mulish", sans-serif;
     text-decoration: none;
-    justify-self: center;
+    align-self: center;
   }
-  body .waitlist-frame {
-    display: none;
+  body .waitlist-frame button {
+    width: 10vw;
+    padding: 0.5vw;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Mulish", sans-serif;
+    border: none;
+    color: white;
+    background-image: linear-gradient(#04F2F2, #00BAFF);
   }
   body .menu-icon {
-    display: flex;
-  }
-  body .menu-icon img {
-    width: 4vw;
-    height: 3.5vw;
+    display: none;
   }
   body .container-1 {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
     max-width: 100%;
-    align-items: center;
+    justify-content: center;
     gap: 4vw;
   }
   body .container-1 .container-1-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   body .container-1 .container-1-text h2 {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
-    text-align: center;
+    width: 25vw;
     color: black;
     margin-bottom: 1vw;
   }
   body .container-1 .container-1-text h2 span {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: #04F2F2;
   }
+  body .container-1 .container-1-text h2 span:before {
+    content: "";
+    -webkit-animation-name: content;
+            animation-name: content;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  @-webkit-keyframes content {
+    0% {
+      content: "Crypto";
+    }
+    50% {
+      content: "NFTs";
+    }
+    100% {
+      content: "Giftcards";
+    }
+  }
+  @keyframes content {
+    0% {
+      content: "Crypto";
+    }
+    50% {
+      content: "NFTs";
+    }
+    100% {
+      content: "Giftcards";
+    }
+  }
   body .container-1 .container-1-text p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
-    width: 85vw;
+    width: 30vw;
     color: black;
-    text-align: center;
   }
   body .container-1 .container-1-text form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     margin-top: 1vw;
   }
   body .container-1 .container-1-text form input {
-    width: 80vw;
+    width: 22vw;
     border: 2px solid grey;
     border-radius: 8px;
-    padding: 2vw;
+    padding: 1vw;
     font-size: 18px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
@@ -107,8 +135,8 @@
   }
   body .container-1 .container-1-text form button {
     background-image: linear-gradient(#04F2F2, #00BAFF);
-    width: 85vw;
-    padding: 2.5vw;
+    width: 10vw;
+    padding: 0.5vw;
     border-radius: 8px;
     font-size: 20px;
     font-weight: 700;
@@ -123,114 +151,106 @@
     font-size: 17px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
-    width: 85vw;
+    width: 35vw;
     color: black;
     margin-bottom: 1vw;
   }
   body .container-1 .container-1-text h6 {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: row;
     gap: 5px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 400;
     font-family: "Mulish", sans-serif;
-    width: 85vw;
+    width: 35vw;
     color: black;
   }
   body .container-1 .container-1-text h6 img {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 1.5vw;
   }
   body .container-1 .container-1-text h6 span {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: #00BAFF;
   }
-  body .container-1 .container-1-text h6 .b2 {
+  body .container-1 .container-1-img {
+    padding-top: 3vw;
+  }
+  body .container-1 .container-1-img img {
+    width: 45vw;
+  }
+  body .container-1 .container-1-number {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: -17vw;
+  }
+  body .container-1 .container-1-number h1 {
+    font-size: 96px;
+    font-weight: 600;
+    font-family: "Mulish", sans-serif;
+    color: black;
+    margin-bottom: -1vw;
+  }
+  body .container-1 .container-1-number p {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Mulish", sans-serif;
+    color: black;
+  }
+  body .container-1 .container-1-number span {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Mulish", sans-serif;
+    color: black;
     justify-self: right;
   }
-  body .container-1-img {
-    display: flex;
-    align-items: center;
-    margin-bottom: -5vw;
-  }
-  body .container-1-img img {
-    width: 75vw;
-  }
-  body .container-1-number {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  body .container-1-number h1 {
-    font-size: 64px;
-    font-weight: 600;
-    font-family: "Mulish", sans-serif;
-    color: black;
-  }
-  body .container-1-number p {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Mulish", sans-serif;
-    color: black;
-    margin-top: -7vw;
-  }
-  body .container-1-number span {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Mulish", sans-serif;
-    color: black;
-  }
-  .curly-arrow {
+  body .curly-arrow {
     display: grid;
     justify-content: center;
     max-width: 100%;
-    margin-top: 3vw;
   }
-  .curly-arrow img {
+  body .curly-arrow img {
     width: 5vw;
   }
-  .why-kiakia {
+  body .why-kiakia {
     display: grid;
     grid-template-columns: auto;
     max-width: 100%;
     justify-content: center;
-    margin-top: 13vw;
+    margin-top: 2vw;
   }
-  .why-kiakia .why-kiakia-1 {
+  body .why-kiakia .why-kiakia-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
   }
-  .why-kiakia .why-kiakia-1 p {
-    font-size: 16px;
+  body .why-kiakia .why-kiakia-1 p {
+    font-size: 20px;
     font-weight: 600;
     font-family: "Mulish", sans-serif;
     color: #616161;
-    margin-bottom: -5vw;
   }
-  .why-kiakia .why-kiakia-1 h2 {
-    font-size: 32px;
+  body .why-kiakia .why-kiakia-1 h2 {
+    font-size: 40px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-  .why-kiakia .why-kiakia-2 {
+  body .why-kiakia .why-kiakia-2 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
   }
-  .why-kiakia .why-kiakia-3 {
+  body .why-kiakia .why-kiakia-3 {
     display: grid;
     justify-content: center;
     max-width: 100%;
     margin-top: 2vw;
   }
-  .why-kiakia .why-kiakia-3 button {
-    width: 85vw;
-    padding: 2vw;
+  body .why-kiakia .why-kiakia-3 button {
+    width: 25vw;
+    padding: 1vw;
     border-radius: 8px;
     font-size: 20px;
     font-weight: 700;
@@ -239,287 +259,270 @@
     color: white;
     background-image: linear-gradient(#04F2F2, #00BAFF);
   }
-  .trade-container {
+  body .trade-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10vw;
     margin-top: 7vw;
   }
-  .trade-container .trade-container-text {
+  body .trade-container .trade-container-text {
     display: flex;
     flex-direction: column;
-    padding-left: 7vw;
-    margin-bottom: 2.5vw;
+    padding-top: 7vw;
   }
-  .trade-container .trade-container-text h2 {
-    font-size: 32px;
+  body .trade-container .trade-container-text h2 {
+    font-size: 40px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
-    margin-bottom: 1.5vw;
+    width: 25vw;
   }
-  .trade-container .trade-container-text p {
-    font-size: 16px;
+  body .trade-container .trade-container-text p {
+    font-size: 20px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
+    width: 30vw;
   }
-  .trade-container .trade-container-image {
-    justify-self: center;
+  body .trade-container .trade-container-image img {
+    width: 45vw;
+    height: 40vw;
   }
-  .trade-container .trade-container-image img {
-    width: 75vw;
-    height: 70vw;
-  }
-  .nft-container {
+  body .nft-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10vw;
     margin-top: 7vw;
   }
-  .nft-container .nft-container-text {
+  body .nft-container .nft-container-text {
     display: flex;
     flex-direction: column;
-    padding-left: 7vw;
-    order: 1;
-    margin-bottom: 2.5vw;
+    padding-top: 7vw;
   }
-  .nft-container .nft-container-text h2 {
-    font-size: 32px;
+  body .nft-container .nft-container-text h2 {
+    font-size: 40px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
-    margin-bottom: 1.5vw;
+    width: 25vw;
   }
-  .nft-container .nft-container-text p {
-    font-size: 16px;
+  body .nft-container .nft-container-text p {
+    font-size: 20px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
+    width: 30vw;
   }
-  .nft-container .nft-container-image {
-    justify-self: center;
-    order: 2;
+  body .nft-container .nft-container-image img {
+    width: 45vw;
+    height: 40vw;
   }
-  .nft-container .nft-container-image img {
-    width: 75vw;
-    height: 70vw;
-  }
-  .gift-card-container {
+  body .gift-card-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10vw;
     margin-top: 7vw;
   }
-  .gift-card-container .gift-card-container-text {
+  body .gift-card-container .gift-card-container-text {
     display: flex;
     flex-direction: column;
-    padding-left: 7vw;
-    margin-bottom: 2.5vw;
+    padding-top: 7vw;
   }
-  .gift-card-container .gift-card-container-text h2 {
-    font-size: 32px;
+  body .gift-card-container .gift-card-container-text h2 {
+    font-size: 40px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
-    margin-bottom: 1.5vw;
+    width: 25vw;
   }
-  .gift-card-container .gift-card-container-text p {
-    font-size: 16px;
+  body .gift-card-container .gift-card-container-text p {
+    font-size: 20px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
-    width: 80vw;
+    width: 30vw;
   }
-  .gift-card-container .gift-card-container-image {
-    justify-self: center;
+  body .gift-card-container .gift-card-container-image img {
+    width: 45vw;
+    height: 40vw;
   }
-  .gift-card-container .gift-card-container-image img {
-    width: 75vw;
-    height: 70vw;
-  }
-  .about-kiakia {
+  body .about-kiakia {
     display: grid;
     max-width: 100%;
     justify-content: center;
     margin-top: 10vw;
   }
-  .about-kiakia .about {
+  body .about-kiakia .about {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 2vw;
     justify-content: center;
     max-width: 100%;
   }
-  .about-kiakia .about p {
-    font-size: 16px;
+  body .about-kiakia .about p {
+    font-size: 20px;
     font-weight: 600;
     font-family: "Mulish", sans-serif;
     color: #616161;
     justify-self: center;
   }
-  .about-kiakia .about h3 {
-    font-size: 32px;
+  body .about-kiakia .about h3 {
+    font-size: 40px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: black;
-    text-align: center;
-    width: 80vw;
-    margin-top: 12vw;
   }
-  .about-content {
+  body .about-content {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 40vw 20vw;
     max-width: 100%;
-    justify-content: left;
+    justify-content: center;
   }
-  .about-content .about-content-logo {
-    display: none;
+  body .about-content .about-content-logo img {
+    width: 25vw;
+    height: 30vw;
   }
-  .about-content .about-content-text {
+  body .about-content .about-content-text {
     display: flex;
     flex-direction: column;
-    padding-left: 5vw;
+    padding-top: 3vw;
   }
-  .about-content .about-content-text h4 {
-    font-size: 16px;
+  body .about-content .about-content-text h4 {
+    font-size: 24px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: black;
     margin-bottom: -1vw;
   }
-  .about-content .about-content-text p {
-    font-size: 16px;
+  body .about-content .about-content-text p {
+    font-size: 20px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
-    width: 90vw;
+    width: 26vw;
   }
-  .connect-section {
+  body .connect-section {
     display: grid;
     max-width: 100%;
     justify-content: center;
   }
-  .connect-section .chat-icon {
+  body .connect-section .chat-icon {
     display: grid;
     grid-template-columns: auto;
   }
-  .connect-section .chat-icon .pattern {
-    width: 85vw;
+  body .connect-section .chat-icon .pattern {
+    width: 35vw;
   }
-  .connect-section .chat-icon .connect-form {
+  body .connect-section .chat-icon .connect-form {
     background-color: white;
     display: grid;
     grid-template-columns: auto;
     justify-content: left;
     padding-left: 3vw;
-    width: 80vw;
-    height: 120vw;
+    width: 25vw;
+    height: 40vw;
     grid-row: 3/2;
     z-index: 1;
-    margin-bottom: -125vw;
-    margin-top: 25vw;
-    margin-left: 8vw;
+    margin-bottom: -45vw;
+    margin-top: 1.5vw;
+    margin-left: 3vw;
     border-radius: 15px;
   }
-  .connect-section .chat-icon .connect-form h3 {
+  body .connect-section .chat-icon .connect-form h3 {
     font-size: 24px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
-    margin-bottom: -3vw;
+    margin-bottom: -6vw;
   }
-  .connect-section .chat-icon .connect-form .hear-you {
-    margin-bottom: 2vw;
+  body .connect-section .chat-icon .connect-form .hear-you {
+    margin-bottom: -10vw;
   }
-  .connect-section .chat-icon .connect-form p {
+  body .connect-section .chat-icon .connect-form p {
     font-size: 16px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-  .connect-section .chat-icon .connect-form input {
-    width: 65vw;
+  body .connect-section .chat-icon .connect-form input {
+    width: 18vw;
     border: 3px solid #2F2E41;
     border-radius: 8px;
-    padding: 2vw;
+    padding: 1vw;
     font-size: 16px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-  .connect-section .chat-icon .connect-form input:focus {
+  body .connect-section .chat-icon .connect-form input:focus {
     outline: none;
   }
-  .connect-section .chat-icon .connect-form textarea {
-    width: 68vw;
+  body .connect-section .chat-icon .connect-form textarea {
+    width: 20vw;
     border: 3px solid #2F2E41;
     border-radius: 8px;
     padding-left: 0.2vw;
-    height: 30vw;
+    height: 8vw;
     font-size: 16px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
     margin-bottom: 2vw;
   }
-  .connect-section .chat-icon .connect-form textarea:focus {
+  body .connect-section .chat-icon .connect-form textarea:focus {
     outline: none;
   }
-  .connect-section .chat-icon .connect-form button {
+  body .connect-section .chat-icon .connect-form button {
     background-color: #2F2E41;
-    width: 70vw;
+    width: 21vw;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: white;
     border: none;
-    padding: 2vw;
+    padding: 1vw;
     border-radius: 8px;
   }
-  .newsletter-section {
+  body .newsletter-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(#04F2F2, #00BAFF);
     max-width: 100%;
-    height: 100vw;
+    height: 30vw;
     padding-top: 4vw;
-    margin-top: 40vw;
   }
-  .newsletter-section p {
-    font-size: 16px;
+  body .newsletter-section p {
+    font-size: 20px;
     font-weight: 600;
     font-family: "Mulish", sans-serif;
     color: #2F2E41;
-    margin-bottom: -2vw;
   }
-  .newsletter-section h2 {
-    font-size: 32px;
+  body .newsletter-section h2 {
+    font-size: 40px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: black;
-    text-align: center;
-    margin-bottom: -4vw;
   }
-  .newsletter-section h6 {
+  body .newsletter-section h6 {
     font-size: 14px;
     font-weight: 600;
     font-family: "Mulish", sans-serif;
     color: black;
-    width: 80vw;
+    width: 40vw;
     text-align: center;
   }
-  .newsletter-section form {
+  body .newsletter-section form {
     display: flex;
-    flex-direction: column;
-    gap: 2vw;
+    flex-direction: row;
+    gap: 1vw;
   }
-  .newsletter-section form input {
+  body .newsletter-section form input {
     background-color: white;
-    border: 2px solid #C1C1C1;
-    width: 65vw;
+    border: 2px solid #2F2E41;
+    width: 25vw;
     padding: 15px;
     border-radius: 8px;
   }
-  .newsletter-section form button {
+  body .newsletter-section form button {
     background-color: #2F2E41;
     border: none;
     font-size: 16px;
@@ -527,117 +530,116 @@
     font-family: "Mulish", sans-serif;
     color: white;
     text-align: center;
-    width: 74vw;
-    padding: 3.5vw;
+    width: 10vw;
     border-radius: 8px;
   }
-  .newsletter-section form input:focus {
+  body .newsletter-section form input:focus {
     outline: none;
   }
-  .newsletter-section form button:focus {
+  body .newsletter-section form button:focus {
     outline: none;
   }
-  footer {
+  body footer {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 45vw auto;
     max-width: 100%;
     justify-content: left;
     padding-left: 7vw;
     padding-top: 6vw;
   }
-  footer .footer-1 {
+  body footer .footer-1 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-1 .footer-1-logo {
+  body footer .footer-1 .footer-1-logo {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-1 .footer-1-logo img {
-    width: 35vw;
+  body footer .footer-1 .footer-1-logo img {
+    width: 15vw;
   }
-  footer .footer-1 .footer-1-logo p {
+  body footer .footer-1 .footer-1-logo p {
     font-size: 16px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
-    width: 90vw;
+    width: 30vw;
   }
-  footer .footer-1 .footer-1-contact {
+  body footer .footer-1 .footer-1-contact {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-1 .footer-1-contact .phone {
+  body footer .footer-1 .footer-1-contact .phone {
     display: flex;
     flex-direction: row;
-    gap: 2vw;
+    gap: 1vw;
   }
-  footer .footer-1 .footer-1-contact .phone img {
-    width: 4vw;
-    height: 4vw;
+  body footer .footer-1 .footer-1-contact .phone img {
+    width: 1vw;
+    height: 2vw;
     align-self: center;
   }
-  footer .footer-1 .footer-1-contact .phone p {
+  body footer .footer-1 .footer-1-contact .phone p {
     font-size: 18px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-  footer .footer-2 {
+  body footer .footer-2 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-2 .footer-2-1 {
+  body footer .footer-2 .footer-2-1 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-2 .footer-2-1 h4 {
+  body footer .footer-2 .footer-2-1 h4 {
     font-size: 24px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-  footer .footer-2 .footer-2-1 .links {
+  body footer .footer-2 .footer-2-1 .links {
     display: flex;
     flex-direction: column;
     gap: 1vw;
   }
-  footer .footer-2 .footer-2-1 .links a {
+  body footer .footer-2 .footer-2-1 .links a {
     font-size: 16px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
     text-decoration: none;
   }
-  footer .footer-2 .footer-2-social h4 {
+  body footer .footer-2 .footer-2-social h4 {
     font-size: 20px;
     font-weight: 700;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-  footer .footer-2 .footer-2-social .socials {
+  body footer .footer-2 .footer-2-social .socials {
     display: flex;
     flex-direction: row;
     gap: 2vw;
   }
-  .copyright {
+  body .copyright {
     display: grid;
     justify-content: center;
     max-width: 100%;
-    margin-top: 10vw;
+    margin-top: 3vw;
   }
-  .copyright .copyright-text {
-    width: 90vw;
+  body .copyright .copyright-text {
+    width: 80vw;
     border-top: 2px solid rgba(0, 187, 255, 0.5215686275);
     display: grid;
     flex-direction: row;
     justify-content: center;
-    padding-top: 4vw;
+    padding-top: 2vw;
   }
-  .copyright .copyright-text span {
+  body .copyright .copyright-text span {
     font-size: 14px;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
     color: black;
   }
-}/*# sourceMappingURL=kiakia-mobile.css.map */
+}/*# sourceMappingURL=kiakia-desktop.css.map */
